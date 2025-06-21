@@ -1,7 +1,19 @@
-export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+const defaultTheme = require('tailwindcss/defaultTheme');
+
+module.exports = {
+  content: [
+    './src/**/*.{js,jsx,ts,tsx}', // already perfect
+  ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Poppins', ...defaultTheme.fontFamily.sans],
+        serif: ['Playfair Display', ...defaultTheme.fontFamily.serif],
+        script: ['Parisienne', 'cursive'],
+      },
+    },
   },
-  plugins: [],
-}
+  plugins: [
+    require('@tailwindcss/line-clamp') // ← this line right here
+  ],
+};
