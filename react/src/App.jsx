@@ -1,24 +1,25 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { CartProvider } from "./context/CartContext";
-import CartPage from "./pages/CartPage.jsx";
-import PrivateRoute from "./components/PrivateRoute.jsx";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import PrivateRoute from "./components/PrivateRoute";
 
+// Pages
 import HomePage from "./pages/HomePage";
 import AboutUs from "./pages/AboutUs";
 import ShopPage from "./pages/ShopPage";
-import CheckoutPage from "./pages/CheckoutPage.jsx";
+import CartPage from "./pages/CartPage";
+import CheckoutPage from "./pages/CheckoutPage";
 import ContactPage from "./pages/ContactPage";
-import JournalPage from "./pages/JournalPostPage.jsx";
-import JournalPostPage from "./pages/JournalPostPage";
-import LoginPage from "./pages/LoginPage.jsx";
-import SignupPage from "./pages/SignupPage.jsx";
-
-
-
+import CraftedStories from "./pages/CraftedStories";
+import LoginPage from "./pages/LoginPage";
+import SignupPage from "./pages/SignupPage";
+import SingleStory from "./pages/SingleStory.jsx";
+import ModernLeather from "./pages/SingleStory2.jsx";
+import LeatherHistory from "./pages/SingleStory3.jsx";
+import TrendsPage from "./pages/TrendsPage.jsx";
 
 const App = () => {
   return (
@@ -27,16 +28,18 @@ const App = () => {
         <Navbar />
 
         <Routes>
+          <Route path="/" element={<HomePage />} />
           <Route path="/shop" element={<ShopPage />} />
           <Route path="/cart" element={<CartPage />} />
-          <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutUs />} />
-          <Route path="/checkout" element={<CheckoutPage />} />
           <Route path="/contact" element={<ContactPage />} />
-          <Route path="/journal" element={<JournalPage />} />
-          <Route path="/journal/:id" element={<JournalPostPage />} />
+          <Route path="/crafted-stories" element={<CraftedStories />} />
+          <Route path="/crafted-stories/why-choose-leather" element={<SingleStory />} />
+          <Route path="/crafted-stories/leather-market-nepal" element={<ModernLeather />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignupPage />} />
+          <Route path="/crafted-stories/leather-history-nepal" element={<LeatherHistory />} />
+          <Route path="/trends" element={<TrendsPage />} />
           <Route
             path="/checkout"
             element={
@@ -45,9 +48,6 @@ const App = () => {
               </PrivateRoute>
             }
           />
-
-
-
         </Routes>
 
         <Footer />

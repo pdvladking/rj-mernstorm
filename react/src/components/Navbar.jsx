@@ -17,10 +17,9 @@ const Navbar = () => {
   };
 
   const navItems = [
-    { label: "New", path: "/" },
     { label: "Trends", path: "/trends" },
     { label: "Shop", path: "/shop" },
-    { label: "Journal", path: "/journal" },
+    { label: "Crafted Stories", path: "/crafted-stories" },
     { label: "Contact", path: "/contact" },
     { label: "About us", path: "/about" },
   ];
