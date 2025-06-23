@@ -4,19 +4,19 @@ const featuredItems = [
   {
     id: 1,
     title: "The Artisan Satchel",
-    image: "/public/webp/featured-1.webp",
+    image: "/featured-1.webp",
     badge: "New",
   },
   {
     id: 2,
     title: "Heritage Wallet",
-    image: "/public/webp/featured-2.webp",
+    image: "/featured-2.webp",
     badge: "Limited",
   },
   {
     id: 3,
     title: "Classic Belt",
-    image: "/public/webp/featured-3.webp",
+    image: "/featured-3.webp",
     badge: "Bestseller",
   },
 ];

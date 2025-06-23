@@ -7,7 +7,7 @@ const Hero = () => {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src="/webp/HeroSection.webp" // Replace with your actual image path
+          src="/HeroSection.webp" // Replace with your actual image path
           alt="Premium leather goods"
           className="w-full h-full object-cover opacity-60"
         />

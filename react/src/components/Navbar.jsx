@@ -30,7 +30,7 @@ const Navbar = () => {
         {/* Logo */}
         <Link to="/">
           <img
-            src="/rawh 6.webp"
+            src="/public/rawh 6.webp"
             alt="logo"
             className="h-10 w-10 rounded-full object-cover"
           />
