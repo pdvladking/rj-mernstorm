@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+const BASE_URL = process.env.REACT_APP_BACKEND_URL;
+
 const SignupPage = () => {
   const [form, setForm] = useState({ name: "", email: "", password: "" });
   const [error, setError] = useState(null);
@@ -15,7 +17,7 @@ const SignupPage = () => {
     setError(null);
 
     try {
-      const res = await fetch("http://localhost:5000/api/signup", {
+      const res = await fetch(`${BASE_URL}/api/signup`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),

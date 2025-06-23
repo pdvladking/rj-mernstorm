@@ -1,13 +1,19 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
+const BASE_URL = process.env.REACT_APP_BACKEND_URL;
+
 export default function useProducts() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
     const loadProducts = async () => {
-      const { data } = await axios.get("http://localhost:5000/products");
-      setProducts(data);
+      try {
+        const { data } = await axios.get(`${BASE_URL}/api/products`);
+        setProducts(data);
+      } catch (error) {
+        console.error("Error fetching products:", error);
+      }
     };
     loadProducts();
   }, []);
