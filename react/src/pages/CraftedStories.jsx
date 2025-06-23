@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const stories = [
   {
     id: 1,
-    image: '/images/leather-heritage.jpg',
+    image: '/public/webp/insights.webp',
     tag: '#Insights',
     title: 'Why Choosing Pure Leather Over Fake Leather Matters',
     excerpt:
@@ -13,7 +13,7 @@ const stories = [
   },
   {
     id: 2,
-    image: '/images/market-trends.jpg',
+    image: '/public/webp/culture.webp',
     tag: '#Culture',
     title: 'The Modern Leather Market in Nepal',
     excerpt:
@@ -22,7 +22,7 @@ const stories = [
   },
   {
     id: 3,
-    image: '/images/leather-history.jpg',
+    image: '/public/webp/behindthescenes.webp',
     tag: '#BehindTheScenes',
     title: 'The Leather Industry in Nepal: A Journey Through History',
     excerpt:

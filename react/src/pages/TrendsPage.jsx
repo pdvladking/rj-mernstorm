@@ -5,19 +5,19 @@ const trends = [
   {
     title: "Urban Nomad",
     description: "Rawhide leather meets street silhouettes.",
-    image: "/images/trend-urban.jpg",
+    image: "/public/webp/trends-1.webp",
     path: "/shop?trend=urban-nomad"
   },
   {
     title: "Earthbound Neutrals",
     description: "Minimalist tan and stone tones.",
-    image: "/images/trend-earth.jpg",
+    image: "/public/webp/product-3.webp",
     path: "/shop?trend=neutrals"
   },
   {
     title: "Ritual Craft",
     description: "Hand-stitched pieces inspired by tradition.",
-    image: "/images/trend-ritual.jpg",
+    image: "/public/webp/product-9.webp",
     path: "/shop?trend=ritual-craft"
   }
 ];

@@ -7,7 +7,7 @@ const ShopTheLook = () => {
         {/* Lifestyle image */}
         <div className="overflow-hidden rounded-lg shadow-lg">
           <img
-            src="/public/look3.svg"
+            src="/public/webp/look-4.webp"
             alt="Styled outfit"
             className="w-full h-full object-cover"
           />
