@@ -26,13 +26,13 @@ const Navbar = () => {
 
   return (
     <nav className="bg-black text-white sticky top-0 z-50 px-6 py-4 shadow-md">
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center ">
         {/* Logo */}
         <Link to="/">
           <img
-            src="/public/rawh 6.webp"
+            src="/rawh.svg"
             alt="logo"
-            className="h-10 w-10 rounded-full object-cover"
+            className="h-10 w-10 object-cover drop-shadow-[0_0_2px_white]"
           />
         </Link>
 
