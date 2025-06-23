@@ -9,7 +9,7 @@ const SingleStory3 = () => {
       {/* Hero */}
       <div className="relative w-full h-[60vh] overflow-hidden">
         <img
-          src="/images/leather-history.jpg"
+          src="/equipments.webp"
           alt="The Leather Industry in Nepal"
           className="w-full h-full object-cover brightness-90"
         />

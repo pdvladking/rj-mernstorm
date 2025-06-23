@@ -9,7 +9,7 @@ const SingleStory = () => {
       {/* Hero Image */}
       <div className="relative w-full h-[60vh] overflow-hidden">
         <img
-          src="/images/leather-heritage.jpg"
+          src="/product-3.webp"
           alt="Pure Leather vs Fake"
           className="w-full h-full object-cover brightness-90"
         />

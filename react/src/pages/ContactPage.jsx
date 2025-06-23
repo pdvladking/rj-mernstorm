@@ -66,7 +66,7 @@ const ContactPage = () => {
         </form>
 
         <div className="mt-8 text-center text-gray-600">
-          <p>Built with love by Raja. Let’s connect:</p>
+          <p> Let’s connect:</p>
           <div className="mt-2 flex justify-center gap-4">
             <a href="https://github.com/your-github" target="_blank" rel="noopener noreferrer" className="underline">
               GitHub
