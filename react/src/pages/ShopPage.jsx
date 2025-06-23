@@ -6,19 +6,28 @@ const BASE_URL = process.env.REACT_APP_BACKEND_URL;
 const ShopPage = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
-    fetch(`${BASE_URL}/api/products`)
-      .then((res) => res.json())
-      .then((data) => {
+    const fetchProducts = async () => {
+      try {
+        const res = await fetch(`${BASE_URL}/api/products`);
+        const data = await res.json();
         setProducts(data);
-        setLoading(false);
-      })
-      .catch((err) => {
+      } catch (err) {
         console.error("Failed to fetch products:", err);
+      } finally {
         setLoading(false);
-      });
+      }
+    };
+
+    fetchProducts();
   }, []);
+
+  // Optional: Filter by search query
+  const filteredProducts = products.filter((product) =>
+    product.name?.toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
   return (
     <div className="min-h-screen bg-gray-50 px-4 sm:px-6 py-10">
@@ -32,6 +41,8 @@ const ShopPage = () => {
           type="text"
           placeholder="Search products..."
           aria-label="Search products"
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
           className="px-4 py-2 border border-gray-300 rounded w-full sm:w-64 shadow-sm focus:ring-amber-600 focus:border-amber-600"
         />
         <select
@@ -48,7 +59,7 @@ const ShopPage = () => {
       {/* Product Grid */}
       {loading ? (
         <p className="text-center text-gray-500 font-medium">Loading products...</p>
-      ) : products.length === 0 ? (
+      ) : filteredProducts.length === 0 ? (
         <div className="text-center mt-20">
           <img
             src="/empty-cart.svg"
@@ -61,7 +72,7 @@ const ShopPage = () => {
         </div>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
-          {products.map((product) => (
+          {filteredProducts.map((product) => (
             <ProductCard key={product._id} product={product} />
           ))}
         </div>
