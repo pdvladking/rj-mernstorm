@@ -6,7 +6,7 @@ const SingleStory = () => {
 
   return (
     <section className="bg-[#fdfaf7] text-gray-900 font-serif">
-      {/* Hero Image */}
+
       <div className="relative w-full h-[60vh] overflow-hidden">
         <img
           src="/product-3.webp"
@@ -22,7 +22,6 @@ const SingleStory = () => {
         </div>
       </div>
 
-      {/* Body */}
       <div className="max-w-3xl mx-auto px-6 py-16 leading-relaxed space-y-8 text-[1.07rem] text-gray-800">
         <p>
           When selecting leather products, many of us face the age-old dilemma: pure or synthetic? While both have their place, understanding the unmatched value of genuine leather can completely shift your mindset.
@@ -71,7 +70,6 @@ const SingleStory = () => {
         </p>
       </div>
 
-      {/* Back link */}
       <div className="max-w-3xl mx-auto px-6 pb-24">
         <button
           onClick={() => navigate(-1)}

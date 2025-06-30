@@ -4,7 +4,7 @@ import { useCart } from "../context/CartContext";
 const CartPage = () => {
   const { cartItems, setCartItems } = useCart();
 
-  // Increase item quantity
+
   const handleIncrease = (id) => {
     setCartItems((prev) =>
       prev.map((item) =>
@@ -15,7 +15,7 @@ const CartPage = () => {
     );
   };
 
-  // Decrease item quantity
+
   const handleDecrease = (id) => {
     setCartItems((prev) =>
       prev
@@ -28,7 +28,7 @@ const CartPage = () => {
     );
   };
 
-  // Sync to localStorage
+
   useEffect(() => {
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
   }, [cartItems]);

@@ -40,7 +40,7 @@ const CraftedStories = () => {
 
   return (
     <section className="bg-[#f9f5f0] text-gray-900">
-      {/* Hero Section */}
+
       <div
         className="max-w-6xl mx-auto px-6 py-24 text-center"
         data-aos="fade-down"
@@ -53,7 +53,7 @@ const CraftedStories = () => {
         </p>
       </div>
 
-      {/* Story Grid */}
+
       <div className="bg-white py-16 px-6">
         <div className="max-w-6xl mx-auto grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
           {stories.map((story) => (

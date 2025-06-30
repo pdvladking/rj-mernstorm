@@ -1,4 +1,4 @@
-// src/data/journalPosts.js
+
 const journalPosts = [
   {
     id: "first-post",

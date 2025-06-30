@@ -4,7 +4,7 @@ const BrandStory = () => {
   return (
     <section className="bg-white dark:bg-black pt-12 pb-24 px-6 md:px-16">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-        {/* Image */}
+
         <div className="w-60 md:w-72 md:max-w-xl mx-auto">
           <img
             src="/public/bubbles.svg"
@@ -13,7 +13,7 @@ const BrandStory = () => {
           />
         </div>
 
-        {/* Text */}
+
         <div>
           <h2 className="text-3xl md:text-5xl font-serif mb-6 text-black dark:text-white">
             Where Craft Meets Legacy

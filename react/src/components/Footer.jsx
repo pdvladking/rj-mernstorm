@@ -29,7 +29,7 @@ const Footer = () => {
           </a>
         </nav>
 
-        {/* Social */}
+
         <div className="flex space-x-4 justify-start">
           <a href="https://instagram.com" target="_blank" rel="noreferrer">
             <FaInstagram className="text-xl hover:text-neutral-400" />
@@ -44,7 +44,7 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom bar */}
+
       <div className="mt-12 border-t border-neutral-700 pt-6 text-sm text-neutral-500 text-center">
         © {new Date().getFullYear()} copyright. All rights reserved.
       </div>

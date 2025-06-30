@@ -32,7 +32,7 @@ const products = [
 const ProductGrid = () => {
   return (
     <section className="bg-neutral-100 dark:bg-black py-24 px-6 md:px-16">
-      {/* Heading */}
+
       <h2 className="text-3xl md:text-5xl font-serif text-center mb-6 text-black dark:text-white">
         Crafted Icons
       </h2>
@@ -41,7 +41,7 @@ const ProductGrid = () => {
         timeless design and enduring craftsmanship.
       </p>
 
-      {/* Product Grid */}
+
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
         {products.map((product) => (
           <div

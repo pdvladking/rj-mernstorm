@@ -2,7 +2,7 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
   content: [
-    './src/**/*.{js,jsx,ts,tsx}', // already perfect
+    './src/**/*.{js,jsx,ts,tsx}',
   ],
   theme: {
     extend: {
@@ -14,6 +14,6 @@ module.exports = {
     },
   },
   plugins: [
-    require('@tailwindcss/line-clamp') // ← this line right here
+    require('@tailwindcss/line-clamp')
   ],
 };

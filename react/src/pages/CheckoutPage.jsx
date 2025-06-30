@@ -1,5 +1,3 @@
-// src/pages/CheckoutPage.jsx
-
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useCart } from "../context/CartContext";
@@ -23,11 +21,11 @@ const CheckoutPage = () => {
 
     console.log("Order submitted:", { ...form, cartItems });
 
-    // Reset cart and form
+
     setCartItems([]);
     setForm({ name: "", address: "", phone: "" });
 
-    // Redirect to success page
+
     navigate("/success");
   };
 

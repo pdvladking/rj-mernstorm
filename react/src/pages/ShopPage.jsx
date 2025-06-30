@@ -24,7 +24,6 @@ const ShopPage = () => {
     fetchProducts();
   }, []);
 
-  // Optional: Filter by search query
   const filteredProducts = products.filter((product) =>
     product.name?.toLowerCase().includes(searchQuery.toLowerCase())
   );
@@ -35,7 +34,6 @@ const ShopPage = () => {
         Shop All Products
       </h2>
 
-      {/* Filter + Sort */}
       <div className="flex flex-col sm:flex-row justify-between items-center gap-4 mb-8">
         <input
           type="text"
@@ -56,7 +54,6 @@ const ShopPage = () => {
         </select>
       </div>
 
-      {/* Product Grid */}
       {loading ? (
         <p className="text-center text-gray-500 font-medium">Loading products...</p>
       ) : filteredProducts.length === 0 ? (

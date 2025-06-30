@@ -7,7 +7,6 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import PrivateRoute from "./components/PrivateRoute";
 
-// Pages
 import HomePage from "./pages/HomePage";
 import AboutUs from "./pages/AboutUs";
 import ShopPage from "./pages/ShopPage";

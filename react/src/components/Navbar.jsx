@@ -27,7 +27,7 @@ const Navbar = () => {
   return (
     <nav className="bg-black text-white sticky top-0 z-50 px-6 py-4 shadow-md">
       <div className="flex justify-between items-center ">
-        {/* Logo */}
+
         <Link to="/">
           <img
             src="/rawh.svg"
@@ -36,7 +36,7 @@ const Navbar = () => {
           />
         </Link>
 
-        {/* Desktop Nav */}
+
         <ul className="hidden md:flex gap-8 font-serif font-medium text-base">
           {navItems.map(({ label, path }) => (
             <li key={path}>
@@ -54,9 +54,9 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* Right Content */}
+
         <div className="hidden md:flex items-center gap-6">
-          {/* Icons */}
+
           <div className="flex items-center gap-4 text-xl">
             <button aria-label="Search">
               <FiSearch className="hover:text-gray-300" />
@@ -71,7 +71,7 @@ const Navbar = () => {
             </Link>
           </div>
 
-          {/* Auth Buttons */}
+
           <div className="flex gap-2">
             {user ? (
               <button
@@ -99,7 +99,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Hamburger Icon */}
+
         <button
           className="md:hidden text-2xl"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -109,7 +109,7 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Menu */}
+
       {isMenuOpen && (
         <div className="md:hidden mt-4 space-y-4 font-serif font-medium text-base">
           {navItems.map(({ label, path }) => (

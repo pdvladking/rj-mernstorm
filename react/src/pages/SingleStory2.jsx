@@ -6,7 +6,7 @@ const SingleStory = () => {
 
   return (
     <section className="bg-[#fdfaf7] text-gray-900 font-serif">
-      {/* Hero */}
+
       <div className="relative w-full h-[60vh] overflow-hidden">
         <img
           src="/look-1.webp"
@@ -22,7 +22,7 @@ const SingleStory = () => {
         </div>
       </div>
 
-      {/* Content */}
+
       <div className="max-w-3xl mx-auto px-6 py-16 space-y-8 leading-relaxed text-[1.07rem] text-gray-800">
         <p>
           Nepal’s leather market has evolved far beyond its traditional roots—embracing modern practices while staying grounded in artisanal heritage.
@@ -63,7 +63,6 @@ const SingleStory = () => {
         </p>
       </div>
 
-      {/* Back Link */}
       <div className="max-w-3xl mx-auto px-6 pb-24">
         <button
           onClick={() => navigate(-1)}

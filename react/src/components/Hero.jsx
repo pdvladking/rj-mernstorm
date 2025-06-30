@@ -4,17 +4,17 @@ import { Link } from "react-router-dom";
 const Hero = () => {
   return (
     <section className="relative bg-black text-white overflow-hidden">
-      {/* Background Image */}
+
       <div className="absolute inset-0">
         <img
-          src="/HeroSection.webp" // Replace with your actual image path
+          src="/HeroSection.webp"
           alt="Premium leather goods"
           className="w-full h-full object-cover opacity-60"
         />
         <div className="absolute inset-0 bg-black bg-opacity-40" />
       </div>
 
-      {/* Content */}
+
       <div className="relative z-10 px-6 py-32 md:px-16 flex flex-col items-center text-center">
         <h1 className="text-4xl md:text-6xl font-serif font-semibold leading-tight mb-6">
           Crafted for Legacy.

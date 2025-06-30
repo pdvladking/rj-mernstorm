@@ -4,7 +4,7 @@ const ShopTheLook = () => {
   return (
     <section className="bg-white dark:bg-black py-24 px-6 md:px-16">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-        {/* Lifestyle image */}
+
         <div className="overflow-hidden rounded-lg shadow-lg">
           <img
             src="/look-4.webp"
@@ -13,7 +13,7 @@ const ShopTheLook = () => {
           />
         </div>
 
-        {/* Product details */}
+
         <div>
           <h2 className="text-3xl md:text-5xl font-serif text-black dark:text-white mb-6">
             Shop the Look

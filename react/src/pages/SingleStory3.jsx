@@ -6,7 +6,7 @@ const SingleStory3 = () => {
 
   return (
     <section className="bg-[#fdfaf7] text-gray-900 font-serif">
-      {/* Hero */}
+
       <div className="relative w-full h-[60vh] overflow-hidden">
         <img
           src="/equipments.webp"
@@ -22,7 +22,7 @@ const SingleStory3 = () => {
         </div>
       </div>
 
-      {/* Body */}
+
       <div className="max-w-3xl mx-auto px-6 py-16 leading-relaxed text-[1.07rem] text-gray-800 space-y-8">
         <p>
           Nestled in the Himalayas, Nepal’s leather industry traces a lineage of craftsmanship woven into its cultural fabric. More than commerce, it’s a story of heritage.
@@ -57,7 +57,7 @@ const SingleStory3 = () => {
         </p>
       </div>
 
-      {/* Back link */}
+
       <div className="max-w-3xl mx-auto px-6 pb-24">
         <button
           onClick={() => navigate(-1)}
