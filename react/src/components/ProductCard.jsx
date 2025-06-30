@@ -22,7 +22,7 @@ const ProductCard = ({ product }) => {
 
         <div className="mt-4 flex justify-between items-center">
           <span className="text-xl font-bold text-gray-900">
-            ${product.price.toFixed(2)}
+            {product.priceFormatted || `NPR ${product.price.toFixed(2)}`}
           </span>
           <button
             onClick={() => addToCart(product)}

@@ -1,7 +1,34 @@
 import React, { useEffect, useState } from "react";
 import ProductCard from "../components/ProductCard";
 
-const BASE_URL = process.env.REACT_APP_BACKEND_URL;
+const BASE_URL = import.meta.env.VITE_BACKEND_URL;
+
+const dummyProducts = [
+  {
+    _id: "1",
+    name: "Leather Wallet",
+    price: 49.99,
+    image: "/product-4.webp",
+  },
+  {
+    _id: "2",
+    name: "Stylish Belt",
+    price: 29.99,
+    image: "/product-6.webp",
+  },
+  {
+    _id: "3",
+    name: "Card Holder",
+    price: 19.99,
+    image: "/product-1.webp",
+  },
+  {
+    _id: "4",
+    name: "Vintage Satchel",
+    price: 79.99,
+    image: "/product-2.webp",
+  },
+];
 
 const ShopPage = () => {
   const [products, setProducts] = useState([]);
@@ -13,9 +40,16 @@ const ShopPage = () => {
       try {
         const res = await fetch(`${BASE_URL}/api/products`);
         const data = await res.json();
-        setProducts(data);
+
+        if (Array.isArray(data)) {
+          setProducts(data);
+        } else {
+          console.warn("Invalid product data from backend. Using dummy data.");
+          setProducts(dummyProducts);
+        }
       } catch (err) {
-        console.error("Failed to fetch products:", err);
+        console.error("Failed to fetch products, using fallback data:", err);
+        setProducts(dummyProducts);
       } finally {
         setLoading(false);
       }
@@ -27,6 +61,14 @@ const ShopPage = () => {
   const filteredProducts = products.filter((product) =>
     product.name?.toLowerCase().includes(searchQuery.toLowerCase())
   );
+
+  const formatNPR = (amount) => {
+    return new Intl.NumberFormat("en-NP", {
+      style: "currency",
+      currency: "NPR",
+      minimumFractionDigits: 0,
+    }).format(amount);
+  };
 
   return (
     <div className="min-h-screen bg-gray-50 px-4 sm:px-6 py-10">
@@ -70,7 +112,13 @@ const ShopPage = () => {
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
           {filteredProducts.map((product) => (
-            <ProductCard key={product._id} product={product} />
+            <ProductCard
+              key={product._id}
+              product={{
+                ...product,
+                priceFormatted: formatNPR(product.price),
+              }}
+            />
           ))}
         </div>
       )}

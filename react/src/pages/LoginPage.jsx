@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const BASE_URL = process.env.REACT_APP_BACKEND_URL;
+const BASE_URL = import.meta.env.VITE_BACKEND_URL;
 
 const LoginPage = () => {
   const [form, setForm] = useState({ email: "", password: "" });

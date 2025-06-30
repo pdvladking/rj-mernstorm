@@ -1,6 +1,6 @@
 import React from "react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { CartProvider } from "./context/CartContext";
 
 import Navbar from "./components/Navbar";
@@ -24,35 +24,33 @@ import TrendsPage from "./pages/TrendsPage.jsx";
 const App = () => {
   return (
     <CartProvider>
-      <Router>
-        <Navbar />
+      <Navbar />
 
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/shop" element={<ShopPage />} />
-          <Route path="/cart" element={<CartPage />} />
-          <Route path="/about" element={<AboutUs />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/crafted-stories" element={<CraftedStories />} />
-          <Route path="/crafted-stories/why-choose-leather" element={<SingleStory />} />
-          <Route path="/crafted-stories/leather-market-nepal" element={<ModernLeather />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/signup" element={<SignupPage />} />
-          <Route path="/crafted-stories/leather-history-nepal" element={<LeatherHistory />} />
-          <Route path="/trends" element={<TrendsPage />} />
-          <Route
-            path="/checkout"
-            element={
-              <PrivateRoute>
-                <CheckoutPage />
-              </PrivateRoute>
-            }
-          />
-        </Routes>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/shop" element={<ShopPage />} />
+        <Route path="/cart" element={<CartPage />} />
+        <Route path="/about" element={<AboutUs />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/crafted-stories" element={<CraftedStories />} />
+        <Route path="/crafted-stories/why-choose-leather" element={<SingleStory />} />
+        <Route path="/crafted-stories/leather-market-nepal" element={<ModernLeather />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<SignupPage />} />
+        <Route path="/crafted-stories/leather-history-nepal" element={<LeatherHistory />} />
+        <Route path="/trends" element={<TrendsPage />} />
+        <Route
+          path="/checkout"
+          element={
+            <PrivateRoute>
+              <CheckoutPage />
+            </PrivateRoute>
+          }
+        />
+      </Routes>
 
-        <Footer />
-        <SpeedInsights />
-      </Router>
+      <Footer />
+      <SpeedInsights />
     </CartProvider>
   );
 };
